@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(27, 66%, 92%);
+}
+main{
+    width: 37.5vw;
+}
+.balance{
+    background-color: hsl(10, 79%, 65%);
+    padding: 1.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1em;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 1.5em;
+}
+.balance .balance-amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.balance .balance-amount p{
+    font-size: 1em;
+}
+.balance .balance-amount .balance-money{
+    margin-top: .25em;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.spendings{
+    background-color: hsl(33, 100%, 98%);
+    padding: 2em 2.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    font-family: 'DM Sans', sans-serif;
+    color: hsl(25, 47%, 15%);
+}
+.spendings h1{
+    margin-bottom: .75em;
+}
+.graph{
+    display: flex;
+    justify-content: space-between;
+    height: 220px;
+}
+.graph .column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    width: calc(100% / 7);
+    height: 100%;
+}
+.col-value{
+    display: block;
+    background-color:hsl(25, 47%, 15%);
+    width: 100%;
+    padding: .5em;
+    margin-bottom: .5em;
+    border-radius: .25em;
+    font-size: .85em;
+    font-weight: 700;
+    color: hsl(27, 66%, 92%);
+    text-align: center;
+}
+
+#col-spendings-monday,
+#col-spendings-tuesday,
+#col-spendings-wednesday,
+#col-spendings-thursday,
+#col-spendings-friday,
+#col-spendings-saturday,
+#col-spendings-sunday{
+    display: block;
+    width: 70%;
+    /* height: 20%; */
+    background-color: hsl(10, 79%, 65%);
+    border-radius: .25em;
+}
+#col-spendings-monday{
+    height: 22.5%;
+}
+#col-spendings-tuesday{
+    height: 45%;
+}
+#col-spendings-wednesday{
+    height: 100%;
+    background-color: hsl(186, 34%, 60%);
+}
+#col-spendings-thursday{
+    height: 40%;
+}
+#col-spendings-friday{
+    height: 30%;
+}
+#col-spendings-saturday{
+    height: 57.5%;
+}
+#col-spendings-sunday{
+    height: 35%;
+}
+#col-spendings-monday:hover,
+#col-spendings-tuesday:hover,
+#col-spendings-thursday:hover,
+#col-spendings-friday:hover,
+#col-spendings-saturday:hover,
+#col-spendings-sunday:hover{
+    background-color: hsl(10, 79%, 75%);
+    cursor: pointer;
+}
+#col-spendings-wednesday:hover {
+    background-color: hsl(186, 34%, 70%);
+    cursor: pointer;
+}
+.column p{
+    color: hsl(28, 10%, 53%);
+    margin-top: .5em;
+    font-size: .95em;
+}
+hr{
+    height: 2px;
+    border: 0;
+    background-color: hsl(27, 66%, 92%);
+    margin: 2em 0;
+}
+.vanish{
+    visibility: hidden;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-amount p{
+    color: hsl(28, 10%, 53%);
+    font-size: 1.1em;
+}
+.total-amount .total-money{
+    color: hsl(25, 47%, 15%);
+    font-size: 3em;
+    font-weight: 700;
+}
+.last-month{
+    padding-top: 1em;
+    text-align: right;
+}
+.last-month p{
+    color: hsl(28, 10%, 53%);
+    font-size: 1.1em;
+}
+.last-month .percentage{
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+
+@media (max-width: 430px){
+    main{
+        width: 90vw;
+    }
+    .balance{
+        padding: 1.25em 1.5em;
+    }
+    .balance .balance-amount p {
+        font-size: .95em;
+    }
+    
+    .balance .balance-amount .balance-money {
+        margin-top: .2em;
+        font-size: 1.5em;
+    }
+    .balance img{
+        width: 20%;
+    }
+    .spendings{
+        padding: 1.5em 1.25em;
+    }
+    .spendings h1{
+        font-size: 1.4em;
+    }
+    .total-amount p {
+        font-size: .9em;
+    }
+        
+    .total-amount .total-money {
+        font-size: 1.75em;
+    }
+        
+    .last-month {
+        padding-top: 0em;
+    }
+        
+    .last-month p {
+        font-size: 1em;
+    }
+        .col-value {
+            width: 100%;
+            padding: .5em;
+            margin-bottom: .5em;
+            border-radius: .25em;
+            font-size: .625em;
+            font-weight: 700;
+            color: hsl(27, 66%, 92%);
+            text-align: center;
+        }
+}
